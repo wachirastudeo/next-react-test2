@@ -24,7 +24,7 @@ function Username({username,isVerified}) {
 export default function ({user}) {
  
   return (
-    <>
+    <div className='col-6 col-md-4 text-center'>
       <img src={user.avatar}
         alt={user.fname+' '+user.lname}
         width={100}
@@ -34,6 +34,6 @@ export default function ({user}) {
         username={user.fname+' '+user.lname}
         isVerified={user.isVerified}
       />
-    </>
+    </div>
   )
 }

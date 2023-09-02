@@ -1,5 +1,6 @@
 import React from 'react'
 import Profile from '@/components/Profile';
+import 'bootstrap/dist/css/bootstrap.css';
 
 async function getData() {
   const res = await fetch('https://melivecode.com/api/users')
@@ -16,12 +17,17 @@ export default async function page() {
     <Profile user={user} />
   )
 
-  return <div>
-    {userList}
+  return (
+    <>
+      <div className='container'>
+        <div className='row justify-content-md-center'>
 
+          {userList}
+        </div>
 
+      </div>
 
-  </div>;
+    </>)
 
 }
 
